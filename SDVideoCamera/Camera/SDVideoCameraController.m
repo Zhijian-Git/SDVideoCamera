@@ -158,6 +158,10 @@
             [self.captureManager openCameraFlashLight];
             break;
         }
+        case VideoMenuTypesAudio:{
+            [self.captureManager openRecordAudio];
+            break;
+        }
         default:
             break;
     }

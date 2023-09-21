@@ -201,7 +201,7 @@
         startY += buttonHeight;
         if (menuDataModel.menuType == VideoMenuTypesFlashlight) {
             menuButton.selected = !self.config.isOpenFlashlight;
-            [self  userClickOutButton:menuButton];
+            [self userClickOutButton:menuButton];
         }
     }
 }

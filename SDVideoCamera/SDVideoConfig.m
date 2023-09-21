@@ -47,6 +47,10 @@
     SDVideoMenuDataModel *countDownDataModel = [[SDVideoMenuDataModel alloc] init];
     countDownDataModel.menuType = VideoMenuTypesCountDown;
     [menuButtonArray addObject:countDownDataModel];
+
+    SDVideoMenuDataModel *audioDataModel = [[SDVideoMenuDataModel alloc] init];
+    audioDataModel.menuType = VideoMenuTypesAudio;
+    [menuButtonArray addObject:audioDataModel];
     
     self.menuDataArray = menuButtonArray;
 }

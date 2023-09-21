@@ -13,6 +13,7 @@ typedef enum : NSUInteger {
     VideoMenuTypesTurnOver,// 翻转按钮
     VideoMenuTypesFlashlight,// 闪光灯
     VideoMenuTypesCountDown,// 倒计时
+    VideoMenuTypesAudio,// 录音
 } VideoMenuType;
 
 typedef void(^ButtonActionBlock)(UIButton *sender);

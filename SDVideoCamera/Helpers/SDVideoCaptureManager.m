@@ -223,6 +223,17 @@
     }
 }
 
+- (void)openRecordAudio {
+    [self.captureSession beginConfiguration];
+    if ([self.captureSession.inputs containsObject:self.audioCaptureDeviceInput]) {
+        [self.captureSession removeInput:self.audioCaptureDeviceInput];
+        self.audioCaptureDeviceInput = nil;
+    } else {
+        [self.captureSession addInput:self.audioCaptureDeviceInput];
+    }
+    [self.captureSession commitConfiguration];
+}   
+
 #pragma mark - 设置缩放比例相关方法
 
 - (void)setVideoZoomFactorWithScale:(CGFloat)scale orientation:(TouchMoveOrientation)orientation {

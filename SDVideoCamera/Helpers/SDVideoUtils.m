@@ -245,8 +245,9 @@ typedef enum {
         [videoTrack insertTimeRange:timeRange ofTrack:videoAssetTrack atTime:startTime error:nil];
         passThroughTimeRanges[i] = CMTimeRangeMake(startTime, timeRange.duration);
         
-        if (originalVolume > 0) {
-            [audioTrack insertTimeRange:timeRange ofTrack:[asset tracksWithMediaType:AVMediaTypeAudio][0] atTime:startTime error:nil];
+         NSArray *assetOriAudioTracks = [asset tracksWithMediaType:AVMediaTypeAudio];
+         if (originalVolume > 0 && assetOriAudioTracks.count > 0) {
+            [audioTrack insertTimeRange:timeRange ofTrack:assetOriAudioTracks[0] atTime:startTime error:nil];
             AVMutableAudioMixInputParameters *audioTrackParameters = [AVMutableAudioMixInputParameters audioMixInputParametersWithTrack:audioTrack];
             [audioTrackParameters setVolume:originalVolume atTime:timeRange.duration];
             [audioMixArray addObject:audioTrackParameters];

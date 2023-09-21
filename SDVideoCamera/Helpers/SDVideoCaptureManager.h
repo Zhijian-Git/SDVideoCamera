@@ -34,6 +34,9 @@
 /// 打开闪光灯
 - (void)openCameraFlashLight;
 
+/// 打开录制声音
+- (void)openRecordAudio;
+
 /// 设置相机焦距
 - (void)setVideoZoomFactorWithScale:(CGFloat)scale orientation:(TouchMoveOrientation)orientation;
 
